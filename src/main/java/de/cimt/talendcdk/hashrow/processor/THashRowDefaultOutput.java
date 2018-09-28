@@ -7,4 +7,13 @@ import javax.json.JsonObject;
 // this is the pojo which will be used to represent your data
 public class THashRowDefaultOutput implements Serializable {
     public JsonObject row;
+
+	public JsonObject getRow() {
+		return row;
+	}
+
+	public void setRow(JsonObject row) {
+		this.row = row;
+	}
+
 }
