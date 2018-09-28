@@ -20,8 +20,8 @@ import org.talend.sdk.component.api.processor.Processor;
 import de.cimt.talendcdk.hashrow.service.Cimt_talendcdk_hashrowService;
 
 @Version(1) // default version is 1, if some configuration changes happen between 2 versions you can add a migrationHandler
-@Icon(Icon.IconType.STAR) // you can use a custom one using @Icon(value=CUSTOM, custom="filename") and adding icons/filename_icon32.png in resources
-@Processor(name = "tHashRow")
+@Icon(value=Icon.IconType.CUSTOM, custom = "tHashRow") // you can use a custom one using @Icon(value=CUSTOM, custom="filename") and adding icons/filename_icon32.png in resources
+@Processor(name = "tHashRow" )
 @Documentation("TODO fill the documentation for this processor")
 public class THashRowProcessor implements Serializable {
     private final THashRowProcessorConfiguration configuration;
@@ -54,6 +54,7 @@ public class THashRowProcessor implements Serializable {
         // this is the method allowing you to handle the input(s) and emit the output(s)
         // after some custom logic you put here, to send a value to next element you can use an
         // output parameter and call emit(value).
+        javax.json.bind.Jsonb b;
     }
 
     @AfterGroup
